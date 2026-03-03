@@ -1,26 +1,88 @@
 //  1.- Crear variable de nombre arrayVacio cuyo valor sea un array vacío
+let arrayVacio = [];
 
 //  2.- Crear variable de nombre arrayNumeros declarada con un array de números del 0 al 9 (0, 1, 2...)
+let arrayNumeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 //  3.- Crear variable de nombre arrayNumerosPares declarada con un array con los números pares del 0 al 9 (considerando al 0 par)
+let arrayNumerosPares = [0, 2, 4, 6, 8];
 
 //  4.- Crear variable de nombre arrayBidimensional declarada con valor array [[0, 1, 2], ['a', 'b', 'c']]
+let arrayBidimensional = [
+  [0, 1, 2],
+  ["a", "b", "c"],
+];
 
 //  5.- Crea la función suma que acepte como argumento dos números y devuelva el resultado de su suma
+function suma(num1, num2) {
+  return num1 + num2;
+}
 
 //  6.- Crea la función potenciacion que acepte como argumento dos números y devuelva el resultado de elevar el primero(a) al segundo(b) (a^b)
+function potenciacion(a, b) {
+  return a ** b;
+}
 
 //  7.- Crea la función separarPalabras que acepte como argumento un string y devuelva un array de palabras 'hola mundo' => [hola, mundo]
+function separarPalabras(palabra) {
+let palabraActual = "";
+let resultado = [];
+    for (let i = 0; i < palabra.length; i++) {
+        if (palabra[i] !== " ") {
+        palabraActual += palabra[i];
+        } else {
+        resultado.push(palabraActual);
+        palabraActual = "";
+        }
+  }
+  resultado.push(palabraActual);
+  return resultado;
+}
 
 //  8.- Crea la función repetirString que acepte como argumento un string y un número y devuelva un string que sea el resultado de concatenar el primer string el número dado de veces
+function repetirString (palabra, numero){
+    return palabra.repeat(numero)
+}
 
 //  9.- Crea la función esPrimo que acepte como argumento un número y devuelva true si es primo y false si no lo es
+function esPrimo (numero){
+
+    for (let i = 2; i <= numero -1; i++){
+        if (numero % i == 0){
+            return false
+        }
+    }
+    return true
+}
 
 //  10.- Crear la función ordenarArray que acepta como argumento un array de números y devuelva un array ordenado de menor a mayor
 
+
 //  11.- Crear la función obtenerPares que acepta como argumento un array de números y devuelva un array con los elementos pares
+function obtenerPares (arrNum){
+    resultado =[];
+    
+    for (let i = 0; i < arrNum.length; i++){
+        if (arrNum[i] % 2 == 0){
+            resultado.push(arrNum[i])
+        }
+    }
+    return resultado
+}
 
 //  12.- Crear la función pintarArray que acepte como argumento un array y devuelva una cadena de texto Array entrada: [0, 1, 2] String salida: '[0, 1, 2]'
+function pintarArray(array){
+    let resultado = "["
+    for (i = 0; i < array.length; i++){
+        if (i < array.length -1){
+            resultado += array[i]  + ", "
+        } else{
+        resultado += array[i]
+        }
+    }
+    return resultado + "]"
+}
+
 
 //  13.- Crear la función arrayMapi que acepte como argumento un Array y una función y devuelva un array en el que se haya aplicado la función a cada elemento del array
 
