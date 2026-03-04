@@ -57,6 +57,30 @@ function esPrimo (numero){
 
 //  10.- Crear la función ordenarArray que acepta como argumento un array de números y devuelva un array ordenado de menor a mayor
 
+// function ordenarArray(arr){
+//     let arrOrdenado = [];
+// while (arr.length > 0) {
+//     let minimo = arr[0];
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] < minimo){
+//             minimo = arr[i]
+//         }
+//         arrOrdenado.push(minimo)
+//         minimo = 0;
+//     }
+// }
+// arrOrdenado.push(minimo);
+//  let temporal = [];
+//         for (let i = 0; i < arr.length; i++) {
+//             if (arr[i] !== minimo) {
+//                 temporal.push(arr[i]);
+//             }
+//         }
+//         arr = temporal;
+
+//     return arrOrdenado
+// }
+
 
 //  11.- Crear la función obtenerPares que acepta como argumento un array de números y devuelva un array con los elementos pares
 function obtenerPares (arrNum){
@@ -89,18 +113,35 @@ function pintarArray(array){
 //  14.- Crear la función eliminarDuplicados que acepte como argumento un array y devuelva un array en el que se hayan eliminado los duplicados
 
 //  15.- Crear variable de nombre arrayNumerosNeg declarada con un array de números del 0 al -9 (0, -1, -2...)
+const arrayNumerosNeg = [0, -1, -2, -3, -4, -5, -6, -7, -8, -9];
 
 //  16.- Crear variable de nombre holaMundo declarada con valor array con las palabras 'Hola' y 'Mundo'
+const holaMundo = ["Hola", "Mundo"];
 
 //  17.- Crear variable de nombre loGuardoTodo declarada con valor array con valores 'hola', 'que', 23, 42.33 y 'tal'
+const loGuardoTodo = ["hola", "que", 23, 42.33 , "tal"]
+
 
 //  18.- Crear variable de nombre arrayDeArrays declarada con valor array: [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']]
+const arrayDeArrays = [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']]
 
 //  19.- Crea la función multiplicacion que acepte como argumento dos números y devuelva el resultado de su multiplicación
+function multiplicacion(n1, n2){
+    return n1*n2
+}
 
 //  20.- Crea la función division que acepte como argumento dos números y devuelva el resultado de su division
+function division(num1, num2){
+    return num1/num2
+}
 
 //  21.- Crea la función esPar que acepte como argumento un número y devuelva true si es par y false si es impar
+function esPar(n){
+    if (n % 2 == 0){
+        return true
+    } else
+        return false
+}
 
 //  22.- Crea el array arrayFunciones que tenga como valor las funciones: suma, resta y multiplicación (todas aceptan 2 números como argumento y devuelve el resultado de su operación)
 
