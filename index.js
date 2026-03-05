@@ -19,8 +19,8 @@ function suma(num1, num2) {
 }
 
 //  6.- Crea la función potenciacion que acepte como argumento dos números y devuelva el resultado de elevar el primero(a) al segundo(b) (a^b)
-function potenciacion(a, b) {
-  return a ** b;
+function potenciacion(num1, num2) {
+  return num1 ** num2;
 }
 
 //  7.- Crea la función separarPalabras que acepte como argumento un string y devuelva un array de palabras 'hola mundo' => [hola, mundo]
@@ -41,7 +41,13 @@ function separarPalabras(palabra) {
 
 //  8.- Crea la función repetirString que acepte como argumento un string y un número y devuelva un string que sea el resultado de concatenar el primer string el número dado de veces
 function repetirString(palabra, numero) {
-  return palabra.repeat(numero);
+  let resultado = "";
+
+  for (let i = 0; i < numero; i++) {
+    resultado += palabra;
+  }
+
+  return resultado;
 }
 
 //  9.- Crea la función esPrimo que acepte como argumento un número y devuelva true si es primo y false si no lo es
@@ -55,9 +61,17 @@ function esPrimo(numero) {
 }
 
 //  10.- Crear la función ordenarArray que acepta como argumento un array de números y devuelva un array ordenado de menor a mayor
-
 function ordenarArray(arr) {
-    return arr.sort((a,b) => a-b)
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
 }
 
 //  11.- Crear la función obtenerPares que acepta como argumento un array de números y devuelva un array con los elementos pares
@@ -87,15 +101,15 @@ function pintarArray(array) {
 
 //  13.- Crear la función arrayMapi que acepte como argumento un Array y una función y devuelva un array en el que se haya aplicado la función a cada elemento del array
 function arrayMapi(arr, multiplicarPor2) {
-    let resultado = [];
-    for (let i = 0; i < arr.length; i++) {
-        resultado.push(multiplicarPor2(arr[i]));
-    }
-    return resultado;
+  let resultado = [];
+  for (let i = 0; i < arr.length; i++) {
+    resultado.push(multiplicarPor2(arr[i]));
+  }
+  return resultado;
 }
 
 function multiplicarPor2(n) {
-    return n * 2;
+  return n * 2;
 }
 
 //  14.- Crear la función eliminarDuplicados que acepte como argumento un array y devuelva un array en el que se hayan eliminado los duplicados
@@ -122,8 +136,8 @@ function multiplicacion(n1, n2) {
 }
 
 //  20.- Crea la función division que acepte como argumento dos números y devuelva el resultado de su division
-function division(num1, num2) {
-  return num1 / num2;
+function division(n1, n2) {
+  return n1 / n2;
 }
 
 //  21.- Crea la función esPar que acepte como argumento un número y devuelva true si es par y false si es impar
@@ -142,7 +156,7 @@ function suma(a, b) {
 }
 
 function resta(a, b) {
-  let rest= a - b;
+  let rest = a - b;
   return rest;
 }
 
@@ -152,9 +166,19 @@ function multiplicacion(a, b) {
 }
 
 //  23.- Crear la función ordenarArray2 que acepta como argumento un array de números y devuelva un array ordenado de mayor a menor
-function ordenarArray2(arr){
-    return arr.sort((a,b) => a+b)
+function ordenarArray2(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] < arr[j]) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
 }
+
 //  24.- Crear la función obtenerImpares que acepta como argumento un array de números y devuelva un array con los elementos impares
 
 //  25.- Crear la función sumarArray que acepte como argumento un array numérico y devuelva la suma de los números en el array Array: [1, 2, 3] resultado: 6
