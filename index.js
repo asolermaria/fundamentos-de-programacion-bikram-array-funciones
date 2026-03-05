@@ -113,6 +113,22 @@ function multiplicarPor2(n) {
 }
 
 //  14.- Crear la función eliminarDuplicados que acepte como argumento un array y devuelva un array en el que se hayan eliminado los duplicados
+function eliminarDuplicados(arr) {
+  let resultado = [];
+  let existe = false;
+  for (let i = 0; i < arr.length; i++) {
+    existe = false;
+    for (let j = 0; j < resultado.length; j++) {
+      if (arr[i] === resultado[j]) {
+        existe = true;
+      }
+    }
+    if (existe === false) {
+      resultado.push(arr[i]);
+    }
+  }
+  return resultado;
+}
 
 //  15.- Crear variable de nombre arrayNumerosNeg declarada con un array de números del 0 al -9 (0, -1, -2...)
 const arrayNumerosNeg = [0, -1, -2, -3, -4, -5, -6, -7, -8, -9];
@@ -180,7 +196,30 @@ function ordenarArray2(arr) {
 }
 
 //  24.- Crear la función obtenerImpares que acepta como argumento un array de números y devuelva un array con los elementos impares
+function obtenerImpares(arr) {
+  let resultado = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      resultado.push(arr[i]);
+    }
+  }
+  return resultado;
+}
 
 //  25.- Crear la función sumarArray que acepte como argumento un array numérico y devuelva la suma de los números en el array Array: [1, 2, 3] resultado: 6
+function sumarArray(arr) {
+  let resultado = 0;
+  for (let i = 0; i < arr.length; i++) {
+    resultado += arr[i];
+  }
+  return resultado;
+}
 
 //  26.- Crear la función multiplicarArray que acepte como argumento un array numérico y devuelva la multiplicación de los números en el array Array: [2, 3, 4] resultado: 24
+function multiplicarArray(arr) {
+  let resultado = 1;
+  for (let i = 0; i < arr.length; i++) {
+    resultado *= arr[i];
+  }
+  return resultado;
+}
